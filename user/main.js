@@ -22,9 +22,11 @@ function submitForm(e){
     var name = getInputVal('name');
     var address = getInputVal('address');
     var phone = getInputVal('phone');
+    var dept = getInputVal('dept');
+    var scope = getInputVal('scope');
     var issue = getInputVal('issue');
 
-    saveMessage(name, address, phone, issue);
+    saveMessage(name, address, phone, dept, scope, issue);
 
     //Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -41,12 +43,14 @@ function getInputVal(id){
 }
 
 //Save messages to firebase
-function saveMessage(name, address, phone, issue){
+function saveMessage(name, address, phone, dept, scope, issue){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
         name: name,
         address: address,
         phone: phone,
+        dept: dept,
+        scope: scope,
         issue: issue
     });
 }
@@ -54,16 +58,16 @@ function saveMessage(name, address, phone, issue){
 //Twilio
 var twilio = require('twilio');
 
-var accountSid = 'AC9457c0944a0d0eae8b772a07f0690aa4'; // Your Account SID from www.twilio.com/console
-var authToken = '2beeb73bb1c776d550bfdccee77c9e88';   // Your Auth Token from www.twilio.com/console
+var accountSid = 'a/c sid'; // Your Account SID from www.twilio.com/console
+var authToken = 'token';   // Your Auth Token from www.twilio.com/console
 
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
 
 client.messages.create({
-    body: 'Server Side Twilio install ho gaya hai bro.',
-    to: '+919049245914',  // Text this number
-    from: '+19782881781' // From a valid Twilio number
+    body: 'Your request has been submitted',
+    to: 'to no',  // Text this number
+    from: 'twilio no' // From a valid Twilio number
 })
 .then((message) => console.log(message.sid));
 
