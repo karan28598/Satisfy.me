@@ -10,7 +10,7 @@
       // Initialize Firebase
       
         var config = {
-                        apiKey: "AIzaSyBajHdI7IJln6zbW8ReECJz4YaZCavsnSE",
+                        apiKey: "key",
                         authDomain: "satisfy-me.firebaseapp.com",
                         databaseURL: "https://satisfy-me.firebaseio.com",
                         projectId: "satisfy-me",
@@ -21,7 +21,7 @@
           var refe = firebase.database();
           var dept = refe.ref("Department");
           var issueID;
-          var electricity = dept.child("Electricity");
+          var electricity = dept.child(dept_name);
           electricity.on("value",function(snapshot)
           {
                 snapshot.forEach(function(childSnapshot)

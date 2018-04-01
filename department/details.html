@@ -42,7 +42,7 @@
         console.log(storage);
         document.getElementById("issueID card-title").innerHTML = "Issue # "+storage;
         var config = {
-                        apiKey: "AIzaSyBajHdI7IJln6zbW8ReECJz4YaZCavsnSE",
+                        apiKey: "key",
                         authDomain: "satisfy-me.firebaseapp.com",
                         databaseURL: "https://satisfy-me.firebaseio.com",
                         projectId: "satisfy-me",
@@ -52,7 +52,7 @@
           firebase.initializeApp(config);
           var refe = firebase.database();
           var dept = refe.ref("Department");
-          var electricity = dept.child("Electricity");
+          var electricity = dept.child(dept_name);
           var ngb = electricity.child(storage);
           ngb.on("value",function(snapshot)
           {
