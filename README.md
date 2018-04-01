@@ -16,6 +16,8 @@
 
 >Satisfy Me is a Public Grievance Redressal Management system where you submit your grievances from your area and get it resolved by the concerned authorities as quickly as possible.
 
+>Check out the demo [here](https://drive.google.com/drive/folders/1h_iS-qyv2xd4fbd3du-nHF0qu0-XWX-3?usp=sharing)
+
 >It has 2 parts. First is a User-side mobile application and web-app and Second is an authority-side web application. People can post the daily life problems they are facing like power cuts, water shortage, garbage disposal, etc via SMS or the app and it will get updated on the Government Authorities application. Other people can upvote the problems if they're facing the same. More the upvotes, more will be the severity of the problem and the quicker it'll get solved. The department will send a concerned team to the address and get the issue solved. Once it's solved, it gets marked as solved.
 
 > The SMS gets recorded on our database and then added to the departmental server.
@@ -44,19 +46,20 @@
 
 ### To Do
 
-- [ ] Add Grievance
-- [ ] Solved by Department
-- [ ] Grievance by SMS
+- [x] Add Grievance
+- [x] Solved by Department
+- [x] Grievance by SMS
+- [x] User Dashboard and Feedback
 
 ------------------------------------------
 
 ### SMS Functionality Instructions
 
-> You can avail our service by sending an SMS in the following format:
+> You can avail our service by sending an SMS in the following format:<br>
 > XXWLF UIDAI -Department -Type <Details> <Address>
 - XXWLF is a keyword
 - Followed by your 12 digit UIDAI Aadhar Number
-- Department is to be replaced by any of the four available departments namely Electricity, Water, Health, Infrastructure. `-E/-W/-H/-I`
+- Department is to be replaced by any of the four available departments namely Electricity, Water, Health, Infrastructure.<br> `-E/-W/-H/-I`
 - Type refers to the scope of the problem. Personal or Community. `-P/-C`
 - These are followed by the description and address wrapped in respective chevron pairs.
 <p align="center">
