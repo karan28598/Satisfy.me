@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <title>New Issues</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="issues col-xs-12 col-md-12">
+                    <div class="row">
+                        <div class="issue col-xs-12 col-sm-6 col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="issueID card-title">Issue #I01042018001</h5>
+                                    <div class="detail"><b>Pieline Leak</b></div>
+                                    <div class="department">Water Department</div>
+                                    <div class="sector">Type: Community</div>
+                                    <div class="status">Status: Acknoledged</div>
+                                    <div class="votes">Upvotes: 41</div>
+                                    <a class="vote btn btn-dark mt-3 disabled" href="#">Upvoted</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="issue col-xs-12 col-sm-6 col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="issueID card-title">Issue #I01042018002</h5>
+                                    <div class="detail"><b>Pieline Leak at Gandhi Chauk</b></div>
+                                    <div class="department">Water Department</div>
+                                    <div class="sector">Type: Community</div>
+                                    <div class="status">Status: Submitted</div>
+                                    <div class="votes">Upvotes: 12</div>
+                                    <a class="vote btn btn-secondary mt-3" href="#">Upvote</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="issue col-xs-12 col-sm-6 col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="issueID card-title">Issue #I01042018003</h5>
+                                    <div class="detail"><b>Pieline Leak at Navjeevan Society</b></div>
+                                    <div class="department">Water Department</div>
+                                    <div class="sector">Type: Personal</div>
+                                    <div class="status">Status: Submitted</div>
+                                    <div class="votes">Upvotes: 2</div>
+                                    <a class="vote btn btn-secondary mt-3" href="#">Upvote</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="issue col-xs-12 col-sm-6 col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="issueID card-title">Issue #I01042018004</h5>
+                                    <div class="detail"><b>Pieline Leak at Somaiya Vidyavihar</b></div>
+                                    <div class="department">Water Department</div>
+                                    <div class="sector">Type: Community</div>
+                                    <div class="status">Status: Submitted</div>
+                                    <div class="votes">Upvotes: 23</div>
+                                    <a class="vote btn btn-secondary mt-3" href="#">Upvote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="float">
+                <i class="fa fa-plus my-float"></i>
+            </a>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.vote').click(function() {
+                if (! $(this).hasClass('disabled')) {
+                    $(this).removeClass('btn-secondary');
+                    $(this).addClass('disabled');
+                    $(this).addClass('btn-dark');
+                    $(this).text("Upvoted");
+                }
+            });
+        });
+    </script>
+</html>
