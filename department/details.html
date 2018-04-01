@@ -2,9 +2,12 @@
 <html>
     <head>
         <title>Details</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css">
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+    <script>
+        </script>
     </head>
     <body>
         <div class="container">
@@ -12,37 +15,20 @@
                 <div class="col-xs-12 col-md-12 mt-5">
                     <div id="issue-details" class="card">
                         <div class="card-body">
-                            <h5 class="issueID card-title">Issue #I01042018001</h5>
+                            <h5 id="issueID card-title"></h5>
                             <div class="row">
                                 <div class="col-xs-12 col-md-3 photo">
                                     <img src="images/placeholder.png" alt="Placeholder" class="img-fluid">
                                 </div>
                                 <div class="col-xs-12 col-md-9">
-                                    <div class="detail"><b>Pieline Leak</b></div>
-                                    <div class="sector">Type: Community</div>
-                                    <div class="status">Status: Acknowledged</div>
-                                    <div class="authorized">Not Authorized</div>
-                                    <div class="users">Reported by: 42</div>
+                                    <div class="detail"><b id = "det"></b></div>
+                                    <div class="sector"></div>
+                                    <div class="status"></div>
+                                    <div class="authorized"></div>
+                                    <div class="users"></div>
                                     <a class="btn btn-secondary mt-3" href="authorize.html">Authorize</a>
-                                    <a class="btn btn-primary mt-3" href="#" data-toggle="modal" data-target="#exampleModal">Submited By</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Issue #I01042018001</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>UIDAI #123456789102</p>
-                            <p>UIDAI #123456789112</p>
                         </div>
                     </div>
                 </div>
@@ -51,4 +37,29 @@
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        var storage = localStorage.getItem("issueID");
+        console.log(storage);
+        document.getElementById("issueID card-title").innerHTML = "Issue # "+storage;
+        var config = {
+                        apiKey: "AIzaSyBajHdI7IJln6zbW8ReECJz4YaZCavsnSE",
+                        authDomain: "satisfy-me.firebaseapp.com",
+                        databaseURL: "https://satisfy-me.firebaseio.com",
+                        projectId: "satisfy-me",
+                        storageBucket: "satisfy-me.appspot.com",
+                        messagingSenderId: "31323616460"
+                            };
+          firebase.initializeApp(config);
+          var refe = firebase.database();
+          var dept = refe.ref("Department");
+          var electricity = dept.child("Electricity");
+          var ngb = electricity.child(storage);
+          ngb.on("value",function(snapshot)
+          {
+                    var dets = snapshot.child("Details").val();
+                    var sector = snapshot.child("Sector").val();
+                    var stat = snapshot.child("Status").val();
+                    document.getElementById("det").innerHTML = dets; 
+            })
+    </script>
 </html>

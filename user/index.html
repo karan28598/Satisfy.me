@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Details</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 mt-5">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="address" placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="phone" placeholder="Mobile No.">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="dept">
+                                <option selected value=" ">- Department Name -</option>
+                                <option value="Electricity">Electricity</option>
+                                <option value="Health">Health</option>
+                                <option value="Infrastructure">Infrastructure</option>
+                                <option value="Water">Water</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="scope">
+                                <option selected value=" ">- Type -</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Private">Community</option>
+                            </select>
+                        </div>
+                        <div class="form-group">    
+                            <textarea class="form-control" id="issue" rows="4" placeholder="Issue Details"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</html>
