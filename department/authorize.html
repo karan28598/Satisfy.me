@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <title>Details</title>
+        <title>Authorize</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/minty/bootstrap.min.css">
     </head>
@@ -19,10 +20,19 @@
                                 <div class="col-xs-12 col-md-9">
                                     <div class="detail"><b>Pieline Leak</b></div>
                                     <div class="sector">Type: Community</div>
-                                    <div class="status">Status: Acknowledged</div>
-                                    <div class="authorized">Not Authorized</div>
-                                    <div class="users">Reported by: 42</div>
-                                    <a class="btn btn-secondary mt-3" href="authorize.html">Authorize</a>
+                                    <form action="#">
+                                        <div class="form-group mt-3">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option selected>- Select Authority -</option>
+                                                <option>AID_0001</option>
+                                                <option>AID_0002</option>
+                                                <option>AID_0003</option>
+                                                <option>AID_0004</option>
+                                                <option>AID_0005</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                    <a class="btn btn-secondary mt-3" href="details.html">Authorize</a>
                                 </div>
                             </div>
                         </div>
