@@ -18,7 +18,7 @@
 
 >Check out the demo [here](https://drive.google.com/drive/folders/1h_iS-qyv2xd4fbd3du-nHF0qu0-XWX-3?usp=sharing)
 
->It has 2 parts. First is a User-side mobile application and web-app and Second is an authority-side web application. People can post the daily life problems they are facing like power cuts, water shortage, garbage disposal, etc via SMS or the app and it will get updated on the Government Authorities application. Other people can upvote the problems if they're facing the same. More the upvotes, more will be the severity of the problem and the quicker it'll get solved. The department will send a concerned team to the address and get the issue solved. Once it's solved, it gets marked as solved.
+>It has 3 parts. `First is a User-side mobile application and web-app`, `Second is an authority-side web application`, `Third is the workman side application where in he can update if he has solved the issue by going to the address`. People can post the daily life problems they are facing like power cuts, water shortage, garbage disposal, etc via SMS or the app and it will get updated on the Government Authorities application. Other people can upvote the problems if they're facing the same. More the upvotes, more will be the severity of the problem and the quicker it'll get solved. The department will send a concerned team to the address and get the issue solved. Once it's solved, it gets marked as solved.
 
 > The SMS gets recorded on our database and then added to the departmental server.
 <p align="center">
