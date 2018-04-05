@@ -16,7 +16,7 @@
 
 >Satisfy Me is a Public Grievance Redressal Management system where you submit your grievances from your area and get it resolved by the concerned authorities as quickly as possible.
 
->Check out the demo [here](https://drive.google.com/drive/folders/1h_iS-qyv2xd4fbd3du-nHF0qu0-XWX-3?usp=sharing)
+>Check out the demo [here](https://youtu.be/-lPm3Naylho)
 
 >It has 3 parts. `First is a User-side mobile application and web-app`, `Second is an authority-side web application`, `Third is the workman side application where in he can update if he has solved the issue by going to the address`. People can post the daily life problems they are facing like power cuts, water shortage, garbage disposal, etc via SMS or the app and it will get updated on the Government Authorities application. Other people can upvote the problems if they're facing the same. More the upvotes, more will be the severity of the problem and the quicker it'll get solved. The department will send a concerned team to the address and get the issue solved. Once it's solved, it gets marked as solved.
 
